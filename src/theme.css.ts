@@ -16,10 +16,14 @@ const [light_theme, vars] = createTheme({
     1: "#fff",
     2: "#fff",
     3: "#f5f5f5",
+    4: "#DB6D8C",
+    5: "#c4c7ca",
   },
   border: {
     0: "#ececec",
     1: "#ffc2d4",
+    2: "#DB6D8C",
+    3: "#c4c7ca",
   },
   filter: {
     0: `drop-shadow(.094rem .094rem .188rem #1c1c1c10)`,
@@ -40,10 +44,14 @@ const dark_theme = createTheme(vars, {
     1: "#191919",
     2: "#1e1e1e",
     3: "#252525",
+    4: "#DB6D8C",
+    5: "#252525",
   },
   border: {
     0: "#393939",
     1: "#e69ab0",
+    2: "#DB6D8C",
+    3: "#242424",
   },
   filter: {
     0: `drop-shadow(.125rem .125rem .313rem #1c1c1c)`,

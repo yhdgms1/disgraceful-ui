@@ -2,13 +2,15 @@ import { style } from "@vanilla-extract/css";
 import { vars, fonts } from "../../theme.css";
 
 export const title = style({
-  margin: ".5rem 0 .4rem 0",
+  margin: ".5rem 0 0 .5rem",
   display: "block",
 });
 
 export const label = style({
-  margin: ".4rem",
-  width: `calc(100% - .8rem)`,
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  position: "relative",
 });
 
 export const input = style({
@@ -19,7 +21,7 @@ export const input = style({
   background: "#0000",
   border: `.063rem solid ${vars.border[0]}`,
   borderRadius: ".75rem",
-  width: "100%",
+  margin: ".4rem",
   backgroundColor: vars.background[1],
   ":hover": {
     borderColor: vars.border[1],
