@@ -27,3 +27,9 @@ const App = () => {
 - Paragraph
 - Select
 - Textarea
+- Checkbox
+- Header
+
+## About
+
+It was made only to take some of the components out of the [Artemiys-Toolbox](https://github.com/Artemis69/artemiys-toolbox).

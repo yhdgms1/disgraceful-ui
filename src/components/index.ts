@@ -7,3 +7,4 @@ export * from "./Paragraph";
 export * from "./Select";
 export * from "./Textarea";
 export * from "./Checkbox";
+export * from "./Header";

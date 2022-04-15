@@ -1,8 +1,9 @@
-import { Component } from "solid-js";
-import clsx from "clsx";
+import { JSX, Component } from "solid-js";
 import * as styles from "./style.css";
 
-interface Props {
+type NativeAttrs = JSX.HTMLAttributes<HTMLDivElement>;
+
+interface Props extends NativeAttrs {
   independent?: boolean;
   responsive?: boolean;
   /**
@@ -10,14 +11,14 @@ interface Props {
    */
   text?: boolean;
   block?: boolean;
-  class?: string;
 }
 
 const Container: Component<Props> = (props) => {
   return (
     <div
-      class={clsx(props.block && styles.container, props.class)}
+      {...props}
       classList={{
+        [styles.container]: props.block,
         [styles.independent]: props.independent,
         [styles.responsive]: props.responsive,
         [styles.text]: props.text,

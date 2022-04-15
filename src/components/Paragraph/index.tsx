@@ -15,7 +15,10 @@ const Paragraph: Component<Props> = (props) => {
   return (
     <p
       {...rest}
-      class={clsx(styles.text, local.margin && styles.margin, local.class)}
+      class={clsx(styles.text, local.class)}
+      classList={{
+        [styles.margin]: local.margin,
+      }}
     />
   );
 };
