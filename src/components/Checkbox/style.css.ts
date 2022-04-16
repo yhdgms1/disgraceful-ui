@@ -57,9 +57,5 @@ export const label = style({
       backgroundColor: vars.background[5],
       borderColor: vars.border[3],
     },
-    // [`.${dark_theme} ${input}:disabled + &::before`]: {
-    //   backgroundColor: "#252525",
-    //   borderColor: "#242424",
-    // },
   },
 });
