@@ -1,4 +1,4 @@
-import { JSX, Component } from "solid-js";
+import { JSX, Component, splitProps } from "solid-js";
 import * as styles from "./style.css";
 
 type NativeAttrs = JSX.HTMLAttributes<HTMLDivElement>;
@@ -13,10 +13,17 @@ interface Props extends NativeAttrs {
   block?: boolean;
 }
 
-const Container: Component<Props> = (props) => {
+const Container: Component<Props> = ($props) => {
+  const [props, rest] = splitProps($props, [
+    "block",
+    "independent",
+    "responsive",
+    "text",
+  ]);
+
   return (
     <div
-      {...props}
+      {...rest}
       classList={{
         [styles.container]: props.block,
         [styles.independent]: props.independent,
@@ -24,7 +31,7 @@ const Container: Component<Props> = (props) => {
         [styles.text]: props.text,
       }}
     >
-      {props.children}
+      {rest.children}
     </div>
   );
 };
