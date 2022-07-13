@@ -1,4 +1,4 @@
-import { Component } from "solid-js";
+import { FlowComponent } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import clsx from "clsx";
 import * as styles from "./style.css";
@@ -8,7 +8,7 @@ interface Props {
   class?: string;
 }
 
-const Heading: Component<Props> = (props) => {
+const Heading: FlowComponent<Props> = (props) => {
   const className = () => clsx(styles[props.as], props.class);
 
   return (
